@@ -656,9 +656,7 @@ footer {
 
     /* Stats for screens < 992px stays at 2 columns (default) */
 }
-
 @media (max-width: 768px) {
-
     /* Menu toggle behavior */
     .nav-menu {
         display: none; 
@@ -670,7 +668,6 @@ footer {
         background-color: var(--color-text-dark); 
         padding: 10px 5%;
         box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
-        z-index: 999;
     }
     
     .nav-menu a {
@@ -688,16 +685,12 @@ footer {
         display: flex; 
     }
 
-    /* Hero Section Mobile */
+    /* Hero Section Mobile Adjustments */
     .hero {
-        padding-top: 55px;
-        position: relative;
-        overflow: hidden;
+        padding-top: 55px; 
     }
-
+    
     .hero-content {
-        position: relative;
-        z-index: 2;
         flex-direction: column;
         justify-content: flex-start;
     }
@@ -707,38 +700,35 @@ footer {
         padding: 50px 5% 30px 5%;
         text-align: center;
         align-items: center;
+        height: auto; 
+    }
+
+    .hero-text-block .kc-logo-large {
+        max-width: 300px; 
+    }
+
+    .hero-text-block .kc-tagline-hero {
+        font-size: 1.4em; 
+        text-transform: uppercase; 
+        font-family: var(--font-secondary); 
     }
 
     .hero-building-image {
         width: 100%;
-        height: 50vh;
-        position: relative;
-        z-index: 2;
+        height: 50vh; 
+        padding-right: 0; 
     }
-
-    /* UNIFORM GOLD BACKGROUND — EXACT 50% IMAGE COVER */
+    
     .hero-diagonal-background {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: calc(50vh + 160px);
-        background: #F0E68C;
-        clip-path: polygon(
-            0 0,
-            100% 0,
-            100% 50%,   /* right midpoint */
-            0 65%       /* left midpoint → slanted line */
-        );
-        z-index: 1;
+        display: none; 
     }
-
+    
     /* General Section adjustments */
     .container {
         padding: 50px 3%;
     }
 
+    /* Stats Section Mobile Adjustment: Stack into 1 column */
     .stats-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -747,15 +737,18 @@ footer {
     .stat-number {
         font-size: 2.8em;
     }
-
+    
+    /* Projects Section Mobile Adjustment: Stack into 1 column */
     .project-images-gallery {
         grid-template-columns: 1fr;
+        max-width: 100%;
     }
-
+    
     .project-image-wrapper {
         height: 250px; 
     }
 
+    /* About Section box padding adjustment */
     .about-content-box {
         padding: 25px;
         text-align: center;
