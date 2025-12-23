@@ -690,6 +690,8 @@ footer {
     /* Hero Section Mobile Adjustments */
     .hero {
         padding-top: 55px; 
+        position: relative;
+        overflow: hidden;
     }
     
     .hero-content {
@@ -721,8 +723,17 @@ footer {
         padding-right: 0; 
     }
     
+    /* RE-ENABLE yellow background for mobile */
     .hero-diagonal-background {
-        display: none; 
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #f5c542; /* same yellow as desktop */
+        clip-path: none;    /* clean mobile look */
+        z-index: -1;
     }
     
     /* General Section adjustments */
@@ -730,7 +741,7 @@ footer {
         padding: 50px 3%;
     }
 
-    /* Stats Section Mobile Adjustment: Stack into 1 column */
+    /* Stats Section Mobile Adjustment */
     .stats-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -740,7 +751,7 @@ footer {
         font-size: 2.8em;
     }
     
-    /* Projects Section Mobile Adjustment: Stack into 1 column */
+    /* Projects Section Mobile Adjustment */
     .project-images-gallery {
         grid-template-columns: 1fr;
         max-width: 100%;
