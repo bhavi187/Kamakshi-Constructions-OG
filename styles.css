@@ -660,6 +660,35 @@ footer {
 
 @media (max-width: 768px) {
 
+    /* Menu toggle behavior */
+    .nav-menu {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-text-dark); 
+        padding: 10px 5%;
+        box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+    }
+    
+    .nav-menu a {
+        color: var(--color-white);
+        padding: 10px 0;
+        border-bottom: 1px solid #444;
+        text-align: center;
+    }
+    
+    .nav-menu.is-open {
+        display: flex;
+    }
+    
+    .menu-toggle {
+        display: flex; 
+    }
+
     /* Hero Section Mobile Adjustments */
     .hero {
         padding-top: 55px;
@@ -674,34 +703,22 @@ footer {
         justify-content: flex-start;
     }
 
-    /* GOLD SLANTED BACKGROUND (ENDS WITH IMAGE) */
-    .hero-diagonal-background {
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: calc(50vh + 160px); 
-        background: linear-gradient(
-            135deg,
-            #d4af37 0%,   /* rich gold */
-            #f5c542 100%
-        );
-        clip-path: polygon(
-            0 0,
-            100% 0,
-            100% 75%,
-            0 100%
-        );
-        z-index: 1;
-    }
-
     .hero-text-block {
         width: 100%;
         padding: 50px 5% 30px 5%;
         text-align: center;
         align-items: center;
-        height: auto;
+        height: auto; 
+    }
+
+    .hero-text-block .kc-logo-large {
+        max-width: 300px; 
+    }
+
+    .hero-text-block .kc-tagline-hero {
+        font-size: 1.4em; 
+        text-transform: uppercase; 
+        font-family: var(--font-secondary); 
     }
 
     .hero-building-image {
@@ -710,5 +727,62 @@ footer {
         padding-right: 0;
         position: relative;
         z-index: 2;
+    }
+    
+    /* GOLD SLANTED BACKGROUND (ENDS WITH IMAGE) */
+    .hero-diagonal-background {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(50vh + 160px);
+        background: linear-gradient(
+            180deg,
+            #f8df6a 0%,   /* light gold */
+            #f5c542 100%
+        );
+        clip-path: polygon(
+            0 0,
+            100% 0,
+            100% 50%,    /* diagonal cut mid-image */
+            0 70%
+        );
+        z-index: 1;
+    }
+    
+    /* General Section adjustments */
+    .container {
+        padding: 50px 3%;
+    }
+
+    /* Stats Section Mobile Adjustment */
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .stat-number {
+        font-size: 2.8em;
+    }
+    
+    /* Projects Section Mobile Adjustment */
+    .project-images-gallery {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+    
+    .project-image-wrapper {
+        height: 250px; 
+    }
+
+    /* About Section box padding adjustment */
+    .about-content-box {
+        padding: 25px;
+        text-align: center;
+    }
+    
+    .about-content-box p {
+        text-align: left; 
     }
 }
